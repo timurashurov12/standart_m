@@ -3,7 +3,7 @@ import { usePage } from '@inertiajs/react';
 import ru_flag from '../../../../../public/assets/images/flags/ru.svg';
 import uz_flag from '../../../../../public/assets/images/flags/uz.svg';
 
-import { LangPageProps } from '@/types/lang.types';
+import { PageProps } from '@/types/lang.types';
 import Dropdown from '../Dropdown/Dropdown';
 
 const flags: { [key: string]: string } = {
@@ -12,7 +12,7 @@ const flags: { [key: string]: string } = {
 };
 
 export default function LangToggle() {
-    const { languages, current_language } = usePage<LangPageProps>()?.props;
+    const { languages, current_language } = usePage<PageProps>()?.props;
 
     if (!languages || !current_language) return null;
 
