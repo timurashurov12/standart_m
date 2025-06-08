@@ -22,8 +22,12 @@ function keyExistsRecursive(array $array, string $key): bool
     return false;
 }
 
-function getMarkdownContent(string $file): string
+function getMarkdownContent(string|null $file): string
 {
+    if ($file === null) {
+        return '';
+    }
+
     if ($file === 'language.store') {
         return '';
     }
