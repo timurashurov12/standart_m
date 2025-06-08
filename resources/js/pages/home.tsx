@@ -4,7 +4,7 @@ import { Layout } from '@/layouts/app-layout';
 import { Head, Link, usePage } from '@inertiajs/react';
 import { ReactNode } from 'react';
 
-import { LangPageProps } from '@/types/lang.types';
+import { PageProps } from '@/types/lang.types';
 import Banner from '../../../public/assets/images/home/hero.jpg';
 import MetrologyImg from '../../../public/assets/images/home/metrology.jpg';
 import SertificationImg from '../../../public/assets/images/home/sertification.jpeg';
@@ -12,7 +12,7 @@ import TestingImg from '../../../public/assets/images/home/testing.jpg';
 
 const Home = () => {
     const { t } = useTranslate();
-    const { current_language } = usePage<LangPageProps>().props;
+    const { current_language } = usePage<PageProps>().props;
     return (
         <>
             <Head title={t('home.title')}>

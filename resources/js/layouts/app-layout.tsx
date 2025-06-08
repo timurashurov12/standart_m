@@ -19,7 +19,7 @@ export const Layout = ({ children }: AppLayoutProps) => {
     }, [menuOpen]);
 
     return (
-        <div className={cn(menuOpen ? 'overflow-y-hidden' : '', 'min-h-screen bg-gray-100 text-gray-900 dark:bg-gray-900 dark:text-gray-100')}>
+        <div className={cn(menuOpen ? 'overflow-y-hidden' : '', 'min-h-screen bg-gray-100 text-gray-900')}>
             <Header menuOpen={menuOpen} setMenuOpen={setMenuOpen} />
             <main>{children}</main>
             <Footer />
